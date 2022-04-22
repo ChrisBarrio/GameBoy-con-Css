@@ -170,8 +170,8 @@ body {
 
 .gameboy .screen .battery_point.power-on {
   background-color: red;
-  -webkit-box-shadow: 0 0 3px 1px #EF5350;
-          box-shadow: 0 0 3px 1px #EF5350;
+  -webkit-box-shadow: 0 0 3px 3px #EF5350;
+          box-shadow: 0 0 3px 3px #EF5350;
 }
 
 .gameboy .screen .green_screen {
