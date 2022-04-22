@@ -19,6 +19,7 @@ body {
   background-image: url(/img/bg-nintendo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 800px;
 }
 
 .description {
@@ -30,13 +31,39 @@ body {
   color: #ffff;
 }
 
-.description .btn_on {
-  width: 100px;
-  height: 35px;
+.description .btn_on,
+.description .btn_off {
+  min-width: 100px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
   margin-top: 10px;
+  font-weight: bold;
   cursor: pointer;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #ef233c;
+  -webkit-box-shadow: 0 5px #d90429;
+          box-shadow: 0 5px #d90429;
+}
+
+.description .btn_on:hover,
+.description .btn_off:hover {
+  -webkit-box-shadow: 0 3px #d90429;
+          box-shadow: 0 3px #d90429;
+  top: 1px;
+}
+
+.description .btn_on:active,
+.description .btn_off:active {
+  -webkit-box-shadow: 0 0 #d90429;
+          box-shadow: 0 0 #d90429;
+  top: 5px;
 }
 
 .gameboy {
@@ -155,8 +182,13 @@ body {
   background: #bdae58;
   width: 225px;
   height: 205px;
-  -webkit-box-shadow: inset 3px 3px rgba(0, 0, 0, 0.15);
-          box-shadow: inset 3px 3px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.gameboy .screen .green_screen.active {
+  -webkit-box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+          box-shadow: #ccdbe8 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .gameboy .screen .animated-text {
@@ -167,17 +199,16 @@ body {
   right: 0px;
   color: #8a891f;
   font-size: 23px;
-  font-family: "Pretendo";
-  -webkit-transition: top 4s linear;
-  transition: top 4s linear;
+  -webkit-transition: top 3s linear;
+  transition: top 3s linear;
 }
 
 .gameboy .screen .animated-text.end {
   opacity: 1;
   top: 90px;
   left: 35%;
-  -webkit-transition: top 4s linear;
-  transition: top 4s linear;
+  -webkit-transition: top 3s linear;
+  transition: top 3s linear;
 }
 
 .gameboy .screen .animated-text.end .copyright {
